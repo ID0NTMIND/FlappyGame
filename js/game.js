@@ -15,12 +15,16 @@ pipeBottom.src = "image/pipeBottom.png";
 
 var gap = 90;
 
+
 // any keydown 
-document.addEventListener("keydown", moveUp);
+document.addEventListener("keyup", moveUp);
 
 function moveUp() {
     yPos -= 25;
 }
+
+
+
 
 // creation blocks
 var pipe = [];
@@ -69,10 +73,10 @@ function draw() {
     }
     foreground.height = 118;
     ctx.drawImage(foreground, 0, canvas.height - foreground.height, 306, 118);
-    ctx.drawImage(bird, xPos, yPos); // еще 2 обхекта ширина и высота
+    ctx.drawImage(bird, xPos, yPos);
 
     yPos += grav;
-    ctx.fillstyle = "#000";
+    ctx.fillstyle = "#f5f5f5";
     ctx.font = "24px Verdana";
     ctx.fillText("Score " + score, 10, canvas.height - 20);
     requestAnimationFrame(draw);
