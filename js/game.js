@@ -8,8 +8,8 @@ var pipeUp = new Image();
 var pipeBottom = new Image();
 
 bird.src = "image/bird.png";
-background.src = "image/bg.png";
-foreground.src = "image/fg.png";
+background.src = "image/bg2.png";
+foreground.src = "image/fg3.png";
 pipeUp.src = "image/pipeUp.png";
 pipeBottom.src = "image/pipeBottom.png";
 
@@ -58,7 +58,7 @@ function draw() {
             (yPos <= pipe[i].y + pipeUp.height ||
                 yPos + bird.height >= pipe[i].y + pipeUp.height +
                 gap) || yPos + bird.height >= canvas.height - foreground.height) {
-
+            alert("You lose,ha-ha!");
             location.reload(); // refresh page
         }
 
